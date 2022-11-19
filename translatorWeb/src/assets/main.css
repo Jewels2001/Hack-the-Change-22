@@ -33,3 +33,13 @@ a,
     padding: 0 2rem;
   }
 }
+
+
+.navbar {
+  display: inline;
+}
+
+.adbar {
+  height: 5%;
+  width: 100%;
+}
