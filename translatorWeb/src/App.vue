@@ -5,14 +5,13 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <NavBar />
+    <img alt="Vue logo" class="logo" src="@/assets/manyminions.jpg" width="300" height="150" />
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <NavBar msg="Welcome!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">bong</RouterLink>
+        <RouterLink to="/about">Browse</RouterLink>
       </nav>
     </div>
   </header>
