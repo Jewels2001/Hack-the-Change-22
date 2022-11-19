@@ -1,28 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+import AdBar from './components/AdBar.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/manyminions.jpg" width="300" height="150" />
-    <div class="wrapper">
-      <NavBar msg="Welcome!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">bong</RouterLink>
-        <RouterLink to="/articles">Articles</RouterLink>
-        <RouterLink to="/profile">Profile</RouterLink>
-        <RouterLink to="/read">Read</RouterLink>
-        <RouterLink to="/translate">Translate</RouterLink>
-      </nav>
-    </div>
   </header>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
 
   <RouterView />
-</template>
 
+
+</template>
+<!-- 
 <style scoped>
 header {
   line-height: 1.5;
@@ -85,4 +79,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->
