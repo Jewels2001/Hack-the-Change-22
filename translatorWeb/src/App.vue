@@ -13,6 +13,10 @@ import NavBar from './components/NavBar.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">bong</RouterLink>
+        <RouterLink to="/articles">Articles</RouterLink>
+        <RouterLink to="/profile">Profile</RouterLink>
+        <RouterLink to="/read">Read</RouterLink>
+        <RouterLink to="/translate">Translate</RouterLink>
       </nav>
     </div>
   </header>
