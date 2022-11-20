@@ -15,7 +15,15 @@ module.exports = {
       violet: '#492F9E',
       lavender: '#B5A4EB',
     },
-    extend: {},
+  fontFamily: {
+      sans: ['Quicksand', 'serif'],
+      heading: ['Rubik Distressed', 'cursive'],
+  },
+    extend: {
+      backgroundImage: {
+        'hero': "url('src/assets/bg-newspaper.jpg)"
+      }
+    },
   },
   plugins: [],
 }

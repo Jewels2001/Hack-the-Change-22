@@ -5,13 +5,11 @@ import AdBar from './components/AdBar.vue'
 </script>
 
 <template>
-  <header>
-    <h1 class="text-3xl font-bold underline">
-      welcome
-    </h1>
+  <div class = "my-30">
+
     <NavBar msg = "Translator" />
     
-  </header>
+  </div>
 
   <RouterView />
 </template>
