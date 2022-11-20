@@ -10,7 +10,7 @@ defineProps({
 <template>
     <div class="
     text-babyblue 
-    bg-white
+    bg-dgrey
     sticky top-0 
     w-full
     ">

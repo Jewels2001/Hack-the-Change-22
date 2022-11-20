@@ -14,6 +14,7 @@ module.exports = {
       gold: '#EBB400',
       violet: '#492F9E',
       lavender: '#B5A4EB',
+      dgrey: '#111110',
     },
   fontFamily: {
       sans: ['Quicksand', 'serif'],

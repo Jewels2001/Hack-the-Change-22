@@ -25,8 +25,8 @@ export default {
 <template>
     <div class="block m-1">
         <h1>This is an articles page</h1>
-        <table class="table-auto">
-            <thead>
+        <table class="table-auto w-full border border-white">
+            <thead border-inherit>
                 <tr>
                     <th>Title</th>
                     <th>Author</th>
@@ -35,7 +35,14 @@ export default {
                     <th>Original?</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody border-inherit>
+                <tr>
+                    <td>All about Minions</td>
+                    <td>Myself</td>
+                    <td>English</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
                 {#each articles as article}
                 <tr v-for="(title, author, lang) in article">
                     <td> {{ title }}</td>
