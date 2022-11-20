@@ -11,7 +11,7 @@ defineProps({
     <div class="
     text-babyblue 
     bg-gold
-    absolute 
+    fixed 
     w-full
     ">
         <nav class="
