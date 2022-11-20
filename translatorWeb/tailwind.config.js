@@ -12,6 +12,7 @@ module.exports = {
       black: '#000000',
       navy: '#10569E',
       babyblue: '#78B1EB',
+      blue: '#0000FF',
       gold: '#EBB400',
       violet: '#492F9E',
       lavender: '#B5A4EB',

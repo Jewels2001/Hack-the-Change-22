@@ -56,11 +56,11 @@ export default {
       </RouterLink>
       <RouterLink to="/articles" class="hover:italic">Articles</RouterLink>
       <RouterLink to="/translate" class="hover:italic">Translate</RouterLink>
-      <div v-if="this.user">
+      <div v-if="this.user" class="flex">
         <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2 hover:scale-125" src="@/assets/userIcon.png" /></RouterLink>
         <button @click="this.logout()">Log Out</button>
       </div>
-      <div v-else>
+      <div v-else class="flex px-2 m-2">
         <RouterLink to="/register" class="hover:italic">Sign Up</RouterLink>
         <RouterLink to="/login" class="hover:italic">Login</RouterLink>
       </div>
