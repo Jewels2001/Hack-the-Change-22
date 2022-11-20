@@ -22,8 +22,8 @@ export default {
 <style>
 .article-card {
     background-color: rgb(187, 187, 187);
-    width: 300px;
-    margin: 50px;
+    width: 400px;
+    margin: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 6px black;
     color: black;

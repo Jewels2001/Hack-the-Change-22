@@ -14,6 +14,6 @@ export default {
 
 <template>
   <main>
-    <ArticlesView />
+    
   </main>
 </template>

@@ -4,7 +4,7 @@ import { getAuth, signOut } from 'firebase/auth';
 export default {
   data() {
     return {
-      user: this.$parent.$refs['isLoggedIn']
+      user: this.loggedIn
     }
   },
 
@@ -23,6 +23,10 @@ export default {
     }
   },
   
+  updated() {
+    console.log("USER:", this.user);
+  },
+
   props: {
     loggedIn: String
   }
@@ -47,7 +51,7 @@ export default {
         text-xl
         ">
       <RouterLink to="/">
-        <div class="font-heading text-5xl">TRANSLATE.IO</div>
+        <div class="font-heading text-5xl">TRANSLATEME</div>
       </RouterLink>
       <RouterLink to="/articles">Articles</RouterLink>
       <RouterLink to="/translate">Translate</RouterLink>

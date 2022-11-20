@@ -12,13 +12,13 @@ onAuthStateChanged(auth, (user) => {
 </script>
 
 <template>
-  <div class = "my-30">
+  <div class="my-30">
     <NavBar :loggedIn="isLoggedIn.value" />
   </div>
 
   <RouterView />
 </template>
-<!-- 
+
 <style scoped>
 header {
   line-height: 1.5;
@@ -81,4 +81,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style> -->
+</style>
