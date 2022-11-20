@@ -8,24 +8,33 @@ defineProps({
 </script>
 
 <template>
-  <div class="navbar">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
+    <div class="
+    text-babyblue 
+    bg-white
+    absolute 
+    w-full
+    ">
+        <nav class="
+        w-full
+        flex flex-wrap
+        items-center
+        px-2
+        justify-around
+        shadow-lg
+        text-navy
+        text-xl
+        ">
+          <RouterLink to="/"><heading class="font-heading text-5xl">TRANSLATE.IO</heading></RouterLink>
+          <RouterLink to="/articles">Articles</RouterLink>
+          <RouterLink to="/translate">Translate</RouterLink>
+          <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2" src="@/assets/userIcon.png"/></RouterLink>
+        </nav>
+    </div>
+  
 
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      This is our translator webapp.
-    </h3>
-          <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">bong</RouterLink>
-            <RouterLink to="/articles">Articles</RouterLink>
-            <RouterLink to="/profile">Profile</RouterLink>
-            <RouterLink to="/read">Read</RouterLink>
-            <RouterLink to="/translate">Translate</RouterLink>
-          </nav>
-  </div>
 </template>
 
+<!--
 <style scoped>
 h1 {
   font-weight: 500;
@@ -49,3 +58,5 @@ h3 {
   }
 }
 </style>
+
+-->
