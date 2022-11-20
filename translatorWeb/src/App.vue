@@ -13,7 +13,7 @@ onAuthStateChanged(auth, (user) => {
 
 <template>
   <div class = "my-30">
-    <NavBar :loggedIn="isLoggedIn" />
+    <NavBar :loggedIn="isLoggedIn.value" />
   </div>
 
   <RouterView />

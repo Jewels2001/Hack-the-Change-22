@@ -4,7 +4,7 @@ import { getAuth, signOut } from 'firebase/auth';
 export default {
   data() {
     return {
-      userID: this.loggedIn
+      user: this.$parent.$refs['isLoggedIn']
     }
   },
 
@@ -47,14 +47,18 @@ export default {
         text-xl
         ">
       <RouterLink to="/">
-        <heading class="font-heading text-5xl">TRANSLATE.IO</heading>
+        <div class="font-heading text-5xl">TRANSLATE.IO</div>
       </RouterLink>
       <RouterLink to="/articles">Articles</RouterLink>
       <RouterLink to="/translate">Translate</RouterLink>
-      <RouterLink v-if="this.userID === ''" to="/register">Sign Up</RouterLink>
-      <RouterLink v-if="this.userID === ''" to="/login">Login</RouterLink>
-      <RouterLink v-if="this.userID !== ''" to="/profile"><img alt="profile" class="w-10 h-10 my-2" src="@/assets/userIcon.png" /></RouterLink>
-      <button v-if="this.userID !== ''" @click="this.logout()">Log Out</button>
+      <div v-if="this.user">
+        <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2" src="@/assets/userIcon.png" /></RouterLink>
+        <button @click="this.logout()">Log Out</button>
+      </div>
+      <div v-else>
+        <RouterLink to="/register">Sign Up</RouterLink>
+        <RouterLink to="/login">Login</RouterLink>
+      </div>
     </nav>
   </div>
 
