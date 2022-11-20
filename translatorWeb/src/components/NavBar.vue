@@ -36,7 +36,8 @@ export default {
 <template>
   <div class="
     text-babyblue 
-    bg-white
+    bg-gold
+   <!--  bg-white -->
     sticky top-0 
     w-full
     ">
@@ -47,25 +48,24 @@ export default {
         px-2
         justify-around
         shadow-lg
-        text-navy
+        text-black
         text-xl
         ">
       <RouterLink to="/">
         <div class="font-heading text-5xl">TRANSLATEME</div>
       </RouterLink>
-      <RouterLink to="/articles">Articles</RouterLink>
-      <RouterLink to="/translate">Translate</RouterLink>
+      <RouterLink to="/articles" class="hover:italic">Articles</RouterLink>
+      <RouterLink to="/translate" class="hover:italic">Translate</RouterLink>
       <div v-if="this.user">
-        <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2" src="@/assets/userIcon.png" /></RouterLink>
+        <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2 hover:scale-125" src="@/assets/userIcon.png" /></RouterLink>
         <button @click="this.logout()">Log Out</button>
       </div>
       <div v-else>
-        <RouterLink to="/register">Sign Up</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
+        <RouterLink to="/register" class="hover:italic">Sign Up</RouterLink>
+        <RouterLink to="/login" class="hover:italic">Login</RouterLink>
       </div>
     </nav>
   </div>
-
 
 </template>
 
