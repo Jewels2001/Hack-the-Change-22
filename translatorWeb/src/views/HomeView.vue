@@ -1,5 +1,15 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script>
+import ArticlesView from './ArticlesView.vue';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { ref, watchEffect } from 'vue';
+
+export default {
+
+
+  components: {
+    ArticlesView,
+  }
+}
 </script>
 
 <template>

@@ -1,21 +1,28 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
-import AdBar from './components/AdBar.vue'
+import { ref, watchEffect } from 'vue';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+const isLoggedIn = ref('');
+
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  isLoggedIn.value = (user) ? user.uid : '';
+})
 </script>
 
 <template>
   <div class = "my-30">
     <NavBar />
+    <!-- <NavBar :loggedIn="isLoggedIn.value" /> -->
       <div>
         <RouterView />
       </div>
-    
   </div>
   
   
 </template>
-<!-- 
+
 <style scoped>
 header {
   line-height: 1.5;
@@ -78,4 +85,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style> -->
+</style>
