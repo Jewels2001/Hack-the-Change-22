@@ -1,0 +1,47 @@
+/*  here are some styles for the slider menu on left....*/
+nav:not(.mm-menu) {
+  display: none;
+}
+
+.notes-nav {
+  background-color: #ffffff;
+}
+
+.mm-navbar .mm-breadcrumbs {
+  color: rgb(188,43,43) !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+  .mm-navbar .mm-breadcrumbs > a {
+    color: rgb(188,43,43) !important;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+  }
+
+.mm-listview > li > span {
+  background-color: rgb(188,43,43);
+  border: 2px solid rgb(188,43,43);
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+}
+
+.mm-listview > li > a {
+  font-weight: bold;
+  /*font-size: 16px;*/
+  transition: padding 0.5s ease, text-shadow 0.2s ease;
+}
+
+  .mm-listview > li > a:hover {
+    padding-left: 40px;
+  }
+  .mm-listview > li > a.mm-link:hover {
+    border-left: 10px solid rgb(188,43,43);
+    border-right: 10px solid rgb(188,43,43);
+    border-radius: 25px;
+    text-shadow: 0px 0px 2px rgba(188,43,43,0.4);
+  }
+

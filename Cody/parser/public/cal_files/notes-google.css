@@ -1,0 +1,38 @@
+/* Classes to override the defaults from Googles Custom Search Engine */
+/* #___gcse_0  - id of the bar */
+/* .gsc-control-cse - class for the div containing the bar */
+/* .gsc-control-wrapper-cse - class for div containing the form */
+/* form.gsc-search-box and .gsc-search-box-tools classes for the form */
+/* table.gsc-search-box - class for the table containing the input and button */
+/* .gsc-input - class for the table cell containing the input and button */
+/* .gsc-input-box - class for the text input field */
+/* #gsc-iw-id1 - id for the text input field */
+/* .gsc-search-button - class appears in both cell and button */
+/* input.gsc-search-button-v2 - seems to be the class that actually controls the button dimensions */
+/* .gsc-clear-button - class for a clear button.  display : none is default */
+/*                                                              */
+/* in the results "page"    */
+
+.gsc-control-cse {
+  padding: 2px !important;
+  height: 30px !important;
+  vertical-align: middle !important;
+  box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
+}
+
+form.gsc-search-box {
+  margin: 0px !important;
+}
+
+table.gsc-search-box {
+  margin: 0px !important;
+  padding-top: 1px;
+}
+
+.gsc-input {
+  padding : 1px !important;
+}
+
+.gsc-input-box {
+  height:26px !important;
+}

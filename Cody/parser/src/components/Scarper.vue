@@ -1,77 +1,83 @@
 <template>
     <h1> parser</h1>
+    <div class="translate">{{main()}}</div>
   </template>
   
   <script>
-  import fetch from 'cross-fetch';
-  //import fetch from 'node-fetch';
-// Or just: import 'cross-fetch/polyfill';
-fetch('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse')
-  .then(res => {
-    if (res.status >= 400) {
-      throw new Error("Bad response from server");
-    }
-    return res.text();
-  })
-  .then(user => {
-    var parser = new DOMParser();
-      var doc = parser.parseFromString(user, 'text/html');
-    console.log(doc);
-  })
-  .catch(err => {
-    console.error(err);
-  });
-
-  import $ from "jquery";
-  $.get( "https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse", $('').html());
-  $.get( "https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse", function(data){ $("*").html(data)
-    console.log(data)});
-
-
-  function httpGet(theUrl) {
-  let xmlHttpReq = new XMLHttpRequest();
-  xmlHttpReq.open("GET", theUrl, false); 
-  xmlHttpReq.send(null);
-  return xmlHttpReq.responseText;
-}
- console.log(httpGet('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse'));
-
-  //const puppeteer = require('puppeteer');
-    /*
-  const axios = require("axios");
-  const cheerio = require("cheerio");
-
-const fetchTitles = async () => {
-  const response = await        axios.get('https://old.reddit.com/r/movies/');
-
-        const html = response.data;
-
-  const $ = cheerio.load(html);
-
-  const titles = [];
-
-  $('div > p.title > a').each((_idx, el) => {
-   const title = $(el).text()
-   titles.push(title)
-  });
-
-  return titles;
- };
-
-fetchTitles().then((titles) => console.log(titles));*/
-
-  fetch('https://w3collective.com/scrape-sever-side-content-javascript/').then(function (response) {
-      return response.text();
-  }).then(function (html) {
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(html, 'text/html');
-    console.log(doc);
-  });
-  
   export default {
     name: 'ScraperCom',
+    content: String,
     components: {
-    }
+    },
+    mounted: function() {
+        //this.main();
+    },
+    methods: {
+        main: function() {
+            fetch('./stream.html').then(function (response) {
+                return response.text();
+            }).then(function (html) {
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(html, 'text/html');
+                //var hea = doc.getElementsByTagName('body');
+                //var h1 = hea.getElementsByTagName('h1');
+                //console.log(hea[0].innerHTML);
+                var h1 = doc.getElementsByTagName('h1');
+                var h2 = doc.getElementsByTagName('h2');
+                var h3 = doc.getElementsByTagName('h3');
+                var h4 = doc.getElementsByTagName('h4');
+                var p = doc.getElementsByTagName('p');
+                var a = doc.getElementsByTagName('a');
+                //var text = hea[0].innerHTML;
+                var final = '';
+                var len = h1.length;
+                if(len < h2.length) {
+                    len = h2.length;
+                }
+                if(len < h3.length) {
+                    len = h3.length;
+                }
+                if(len < h4.length) {
+                    len = h4.length;
+                }
+                if(len < p.length) {
+                    len = p.length;
+                }
+                if(len < a.length) {
+                    len = a.length;
+                }
+                for(let i = 0; i < len; i++) {
+                    if(i < h1.length) {
+                        final =  final + "\n" + h1[i].innerHTML;
+                        console.log(h1[i].innerHTML);
+                    }
+                    if(i < h2.length) {
+                        final =  final + "\n" + h2[i].innerHTML;
+                        console.log(h2[i].innerHTML);
+                    }
+                    if(i < h3.length) {
+                        final =  final + "\n" + h3[i].innerHTML;
+                        console.log(h3[i].innerHTML);
+                    }
+                    if(i < h4.length) {
+                        final =  final + "\n" + h4[i].innerHTML;
+                        console.log(h4[i].innerHTML);
+                    }
+                    if(i < a.length) {
+                        //final =  final + "\n" + a[i].innerHTML;
+                        console.log(a[i].innerHTML);
+                    }
+                    if(i < p.length) {
+                        final =  final + "\n" + p[i].innerHTML;
+                        console.log(p[i].innerHTML);
+                    }
+                }
+                //console.log(text);
+                console.log(final);
+                return final;
+            });
+        },
+    },
   }
   </script>
   
