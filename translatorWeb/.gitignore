@@ -15,6 +15,7 @@ coverage
 *.local
 .vscode/
 .firebase/
+firebaseConfig.js
 
 /cypress/videos/
 /cypress/screenshots/
