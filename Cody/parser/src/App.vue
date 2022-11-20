@@ -1,19 +1,14 @@
 <template>
-  <h1> parser</h1>
+  <h1> app</h1>
+  <ScraperCom/>
 </template>
 
 <script>
-fetch('example.html')
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (text)  {
-      console.log(text);
-    });
-
+import ScraperCom from "./components/Scarper.vue"
 export default {
   name: 'App',
   components: {
+    ScraperCom,
   }
 }
 </script>
