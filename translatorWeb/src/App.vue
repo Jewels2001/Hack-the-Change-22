@@ -12,11 +12,15 @@ onAuthStateChanged(auth, (user) => {
 </script>
 
 <template>
-  <div class="my-30">
-    <NavBar :loggedIn="isLoggedIn.value" />
+  <div class = "my-30">
+    <NavBar />
+    <!-- <NavBar :loggedIn="isLoggedIn.value" /> -->
+      <div>
+        <RouterView />
+      </div>
   </div>
-
-  <RouterView />
+  
+  
 </template>
 
 <style scoped>

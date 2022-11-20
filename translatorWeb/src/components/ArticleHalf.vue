@@ -11,8 +11,7 @@ export default {
 
 
 <template>
-    <p>Hi</p> 
-    <div>
+    <div class="border rounded border-white">
         <Tiptap />
     </div>
 </template>
