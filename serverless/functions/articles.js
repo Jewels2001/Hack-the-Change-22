@@ -26,7 +26,7 @@ articles.post("/createArticle", (req, res) => {
 
       return res
         .status(200)
-        .send({ status: "Success", msg: "Article successfully created" });
+        .send({ status: "Success", msg: `Article successfully created with ID: ${idString}` });
     } catch (error) {
       console.log(error);
       return res.status(500).send({ status: "Error", msg: error });
