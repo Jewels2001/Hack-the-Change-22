@@ -30,4 +30,3 @@ fetch('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse')
     console.error(err);
   });
 }
-main2();

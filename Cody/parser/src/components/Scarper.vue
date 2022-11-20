@@ -4,8 +4,8 @@
   
   <script>
   import fetch from 'cross-fetch';
+  //import fetch from 'node-fetch';
 // Or just: import 'cross-fetch/polyfill';
-
 fetch('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse')
   .then(res => {
     if (res.status >= 400) {
@@ -21,9 +21,25 @@ fetch('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse')
   .catch(err => {
     console.error(err);
   });
+
+  import $ from "jquery";
+  $.get( "https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse", $('').html());
+  $.get( "https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse", function(data){ $("*").html(data)
+    console.log(data)});
+
+
+  function httpGet(theUrl) {
+  let xmlHttpReq = new XMLHttpRequest();
+  xmlHttpReq.open("GET", theUrl, false); 
+  xmlHttpReq.send(null);
+  return xmlHttpReq.responseText;
+}
+ console.log(httpGet('https://snyk.io/advisor/npm-package/parse5/functions/parse5.parse'));
+
   //const puppeteer = require('puppeteer');
-  /*const axios = require("axios");
-const cheerio = require("cheerio");
+    /*
+  const axios = require("axios");
+  const cheerio = require("cheerio");
 
 const fetchTitles = async () => {
   const response = await        axios.get('https://old.reddit.com/r/movies/');
@@ -43,7 +59,7 @@ const fetchTitles = async () => {
  };
 
 fetchTitles().then((titles) => console.log(titles));*/
-  /*
+
   fetch('https://w3collective.com/scrape-sever-side-content-javascript/').then(function (response) {
       return response.text();
   }).then(function (html) {
@@ -51,7 +67,7 @@ fetchTitles().then((titles) => console.log(titles));*/
       var doc = parser.parseFromString(html, 'text/html');
     console.log(doc);
   });
-  */
+  
   export default {
     name: 'ScraperCom',
     components: {
