@@ -5,7 +5,7 @@ import ArticleHalf from '../components/ArticleHalf.vue'
 </script>
 
 <template>
-    <div class="block p-1">
+    <div class="block m-1">
         <h1>This is where translations happen</h1>
         <div class="flex columns-2">
             <div class="basis-1/2">
@@ -14,7 +14,10 @@ import ArticleHalf from '../components/ArticleHalf.vue'
             <div class="basis-1/2">
                 <ArticleHalf />
             </div>
-            
+        </div>
+        <div class="flex w-screen place-content-center">
+            <button>Save Article Translations</button>
+            <button>Load Article Translations</button>
         </div>
     </div>
     <AdBar />
