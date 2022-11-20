@@ -1,6 +1,8 @@
 <script>
 import { Editor, EditorContent } from "@tiptap/vue-3"
 import StarterKit from "@tiptap/starter-kit"
+import Highlight from '@tiptap/extension-highlight'
+import Typography from '@tiptap/extension-typography'
 
 export default {
     components: { EditorContent, },
@@ -16,6 +18,8 @@ export default {
             content: "<p> Tiptap with Vue.js is working! </p>",
             extensions: [
                 StarterKit,
+                Highlight,
+                Typography,
             ],
         })
     },
