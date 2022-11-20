@@ -3,7 +3,9 @@ import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="bg-hero">
+    <main>
+      <TheWelcome class="center"/>
+    </main>
+</div>
 </template>
