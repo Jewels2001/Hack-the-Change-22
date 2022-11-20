@@ -10,7 +10,7 @@ defineProps({
 <template>
     <div class="
     text-babyblue 
-    bg-white
+    bg-gold
     absolute 
     w-full
     ">
@@ -21,13 +21,13 @@ defineProps({
         px-2
         justify-around
         shadow-lg
-        text-navy
+        text-black
         text-xl
         ">
           <RouterLink to="/"><heading class="font-heading text-5xl">TRANSLATE.IO</heading></RouterLink>
-          <RouterLink to="/articles">Articles</RouterLink>
-          <RouterLink to="/translate">Translate</RouterLink>
-          <RouterLink to="/profile"><img alt="profile" class="w-10 h-10 my-2" src="@/assets/userIcon.png"/></RouterLink>
+          <RouterLink to="/articles" class="hover:italic">Articles</RouterLink>
+          <RouterLink to="/translate" class="hover:italic">Translate</RouterLink>
+          <RouterLink to="/profile" ><img alt="profile" class="w-10 h-10 my-2 hover:scale-125" src="@/assets/userIcon.png"/></RouterLink>
         </nav>
     </div>
   

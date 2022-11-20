@@ -10,8 +10,9 @@ import AdBar from './components/AdBar.vue'
     <NavBar msg = "Translator" />
     
   </div>
-
+  
   <RouterView />
+  
 </template>
 <!-- 
 <style scoped>
