@@ -4,4 +4,4 @@ admin.initializeApp();
 
 module.exports = {
     ...require("./apiModule.js")
-};
+}
