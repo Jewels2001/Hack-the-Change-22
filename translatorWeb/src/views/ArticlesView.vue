@@ -4,7 +4,7 @@ import AdBar from '../components/AdBar.vue'
 </script>
 
 <template>
-    <div class>
+    <div class= "columns-2">
         <h1>This is an articles page</h1>
     </div>
     <AdBar />

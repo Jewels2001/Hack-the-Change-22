@@ -1,10 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ArticlesView from '../views/ArticlesView.vue'
-import ProfileView from '../views/ProfileView.vue'
-import ReadView from '../views/ReadView.vue'
-import TranslatorView from '../views/TranslatorView.vue'
-import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('../views/HomeView.vue')
     },
     {
       path: '/about',
@@ -25,27 +19,40 @@ const router = createRouter({
     {
       path: '/profile',
       name: 'profile',
-      component: ProfileView
+      component: () => import('../views/ProfileView.vue'),
+      meta: {
+        authRequired: true
+      }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/RegisterView.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue')
     },
     {
       path: '/articles',
       name: 'articles',
-      component: ArticlesView
+      component: () => import('../views/ArticlesView.vue')
     },
     {
       path: '/read',
       name: 'read',
-      component: ReadView
+      component: () => import('../views/ReadView.vue')
     },
     {
       path: '/translate',
       name: 'translate',
-      component: TranslatorView
+      component: () => import('../views/TranslatorView.vue')
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: NotFound
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })

@@ -1,14 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
-import AdBar from './components/AdBar.vue'
+import { ref, watchEffect } from 'vue';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+const isLoggedIn = ref('');
+
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  isLoggedIn.value = (user) ? user.uid : '';
+})
 </script>
 
 <template>
   <div class = "my-30">
-
-    <NavBar msg = "Translator" />
-    
+    <NavBar :loggedIn="isLoggedIn" />
   </div>
 
   <RouterView />

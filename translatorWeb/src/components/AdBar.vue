@@ -1,7 +1,12 @@
 
 <template>
-    <div class="adbar">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
+    <div class="adbar stick bot-0s inline w-screen h-20 place-content-evenly">
+        <div class="w-20">
+            <img alt="Vue logo" class="logo object-scale-down" src="@/assets/logo.svg"  />
+        </div>
         <p> Ad here? </p>
     </div>
 </template>
+
+<script>
+</script>
