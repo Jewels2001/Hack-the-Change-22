@@ -2,6 +2,42 @@
 import NavBar from '../components/NavBar.vue'
 import AdBar from '../components/AdBar.vue'
 import ArticleHalf from '../components/ArticleHalf.vue'
+import { EMPTY_OBJ } from '@vue/shared';
+
+
+// function save() {
+    
+// }
+
+
+</script>
+<script>
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+            article: "",
+            ID: null,
+        }
+    },
+    methods: {
+        save() {
+            var url = "";
+
+            alert('Saved!')
+            const html = editor.getHTML()
+            const json = editor.getJSON()
+            if(html != "") {
+                axios.post(url, html)
+                    .then(response => this.ID = response.data.id)
+            }
+            // if(e) {
+            //     alert(e.target.tagName)
+            // }
+        }
+    }
+}
 </script>
 
 <template>
