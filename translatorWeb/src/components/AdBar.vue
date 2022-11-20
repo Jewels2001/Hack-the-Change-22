@@ -7,3 +7,6 @@
         <p> Ad here? </p>
     </div>
 </template>
+
+<script>
+</script>

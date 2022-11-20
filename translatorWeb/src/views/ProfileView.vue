@@ -1,10 +1,9 @@
-<script setup>
-import NavBar from '../components/NavBar.vue'
-import AdBar from '../components/AdBar.vue'
-</script>
-
 <template>
-    <div class="profile">
-        <h1>This is the profile page</h1>
+    <div class="profile-main">
+        <h2>Dashboard</h2>
+        <p>This page is only visible to users that are currently logged in</p>
     </div>
 </template>
+
+<script setup>
+</script>
