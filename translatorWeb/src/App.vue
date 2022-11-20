@@ -6,12 +6,14 @@ import AdBar from './components/AdBar.vue'
 
 <template>
   <div class = "my-30">
-
-    <NavBar msg = "Translator" />
+    <NavBar />
+      <div>
+        <RouterView />
+      </div>
     
   </div>
-
-  <RouterView />
+  
+  
 </template>
 <!-- 
 <style scoped>
