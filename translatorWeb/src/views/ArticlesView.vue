@@ -3,6 +3,7 @@ import Article from '../components/Article.vue'
 import AdBar from '../components/AdBar.vue'
 
 import axios from 'axios'
+import router from '../router'
 
 const articleAPI = "https://us-central1-project-kingbob.cloudfunctions.net/articles/"
 
@@ -22,7 +23,7 @@ export default {
             axios.get(articleAPI + "getArticles")
                 .then((res) => {
                     this.articles = res.data.data;
-                })
+                });
         },
 
         addArticle() {
@@ -40,6 +41,11 @@ export default {
                 .finally(() => {
                     this.getArticles();
                 })
+        },
+
+        read() {
+            alert("Read");
+            router.push('read');
         }
     },
 
@@ -50,24 +56,6 @@ export default {
 }
 </script>
 
-<script>
-
-import axios from "axios";
-
-export default {
-    data() {
-        return {
-            article: "",
-            ID: null,
-        }
-    },
-    methods: {
-        load() {
-            alert("Loaded!")
-        },
-    }
-}
-</script>
 
 <template>
 
@@ -85,26 +73,38 @@ export default {
 
     <div class="block m-1">
         <h1>This is an articles page</h1>
-        <table class="table-auto">
-            <thead>
+        <table class="table-auto w-full border border-white">
+            <thead border-inherit>
                 <tr>
                     <th>Title</th>
-                    <th>Author</th>
+                    <th>Content</th>
                     <th>Language</th>
                     <th>Translated?</th>
                     <th>Original?</th>
                 </tr>
             </thead>
-            <tbody>
-                {#each articles as article}
-                <tr v-for="(title, author, lang) in article">
-                    <td> {{ title }}</td>
-                    <td> {{ author }}</td>
-                    <td> {{ lang }}</td>
+            <tbody border-inherit>
+                <tr>
+                    <td>All about Minions</td>
+                    <td>Some words here</td>
+                    <td>English</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <!-- {#each articles as article} -->
+                <!-- <tr v-for="(title, author, lang) in article"> -->
+                <tr v-for="article in this.articles">
+                    <!-- <Article :data="article" /> -->
+                    <!-- <div v-for="article in this.articles"> -->
+                        <td @click="read" class="text-blue hover:text-violet"> {{ article.title }}</td>
+                        <td>{{ article.body }}</td>
+                        <!-- <Article :data="article" /> -->
+                    <!-- </div> -->
+                    <td> English </td>
                     <td> No </td>
                     <td> Yes </td>
                 </tr>
-                {/each}
+                <!-- {/each} -->
             </tbody>
         </table>
     </div>

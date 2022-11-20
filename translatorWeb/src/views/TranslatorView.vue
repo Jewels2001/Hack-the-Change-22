@@ -28,10 +28,11 @@ export default {
             alert('Saved!')
             const html = editor.getHTML()
             const json = editor.getJSON()
-            if(html != "") {
-                axios.post(url, html)
-                    .then(response => this.ID = response.data.id)
-            }
+            console.log(html);
+            // if(html != "") {
+            //     axios.post(url, html)
+            //         .then(response => this.ID = response.data.id)
+            // }
             // if(e) {
             //     alert(e.target.tagName)
             // }
@@ -52,7 +53,7 @@ export default {
             </div>
         </div>
         <div class="flex w-screen place-content-center">
-            <button>Save Article Translations</button>
+            <button @click="save">Save Article Translations</button>
             <button>Load Article Translations</button>
         </div>
     </div>
